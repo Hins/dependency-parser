@@ -11,8 +11,3 @@ This is the implementation of the paper "A Fast and Accurate Dependency Parser u
 
 # Standford CS224N provides the starter code
 [Link to the course](https://web.stanford.edu/class/cs224n/index.html)
-## Credits: 
-{
-CS224N 2018-19: Homework 3
-Sahil Chopra
-}
