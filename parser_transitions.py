@@ -16,7 +16,7 @@ class PartialParse(object):
         @param sentence (list of str): The sentence to be parsed as a list of words.
                                         Your code should not modify the sentence.
         """
-        # The sentence being parsed is kept for bookkeeping purposes. Do not alter it in your code.
+        # The sentence being parsed is kept for bookkeeping purposes.
         self.sentence = sentence
 
         self.stack = ["ROOT"] # At first the stack has only "ROOT"
