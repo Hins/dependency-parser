@@ -3,7 +3,7 @@
 
 # utils/general_utils.py: 11
 # utils/parser_utils.py: 18
-numpy == 1.16.3
+numpy == 1.22.0
 
 # parser_model.py: 12,13,14
 # run.py: 14,15
