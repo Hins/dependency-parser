@@ -34,6 +34,8 @@ def train(parser, train_data, dev_data, output_path, batch_size=1024, n_epochs=1
     """
     best_dev_UAS = 0
 
+    optimizer = torch.optim.Adam(parser.model.parameters(), lr=1e-3, betas=(0.9, 0.99), eps=1e-8)
+    loss_func = nn.CrossEntropyLoss()
 
     ### YOUR CODE HERE (~2-7 lines)
     ### TODO:
@@ -102,7 +104,7 @@ def train_for_epoch(parser, train_data, dev_data, optimizer, loss_func, batch_si
 
             ### END YOUR CODE
             prog.update(1)
-            loss_meter.update(loss.item())
+            loss_meter.update(loss)
 
     print ("Average Train Loss: {}".format(loss_meter.avg))
 
@@ -118,7 +120,7 @@ if __name__ == "__main__":
     debug = True
     # debug = False
 
-    assert(torch.__version__ == "1.0.0"),  "Please install torch version 1.0.0"
+    assert(torch.__version__ == "1.13.0"),  "Please install torch version 1.0.0"
 
     print(80 * "=")
     print("INITIALIZING")
